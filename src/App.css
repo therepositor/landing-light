@@ -297,7 +297,7 @@ header nav .user-profile-container img:hover {
     flex-direction: column;
     padding: 0.5rem 0;
     width: 50%;
-    padding-right: 2rem;
+    padding-right: 4rem;
   }
   .main section .card-information-container form .right {
     padding-left: 2rem;

@@ -7,7 +7,7 @@ import discover from './discover.png';
 
 
 const Main = ({handleChange,state,handleSubmit}) => {
-    console.log({handleChange, handleSubmit, state})
+    
 
   return (
     <div className='main'>
@@ -31,18 +31,17 @@ const Main = ({handleChange,state,handleSubmit}) => {
                       <img src={discover} alt="discover" />
                   </div>
                   <div className="choices">
-                      <form action="">
+
                           <input type="radio" name="paypal" id="paypal"  readOnly />
                           <label htmlFor="paypal">
                               <img src={paypal} alt="paypal" />
                           </label>
-                      </form>
                   </div>
               </div>
-              <form action="">
+              <form>
                   <div className="form-div">
                       <label htmlFor="credit-card-number">Credit card number</label>
-                      <input  type="text"  id='credit-card-number' onChange={handleChange} name='creditCardNumber' placeholder='4324 5433 9382 1030' 
+                      <input  type="number"  id='credit-card-number' onChange={handleChange} name='creditCardNumber' placeholder='4324 5433 9382 1030' minLength={1} maxLength={16} size='19'
                       value={state?.creditCardNumber ? state.creditCardNumber : ''}
                       />
                   </div>
@@ -50,13 +49,13 @@ const Main = ({handleChange,state,handleSubmit}) => {
                       <div className="label-container">
                           <label htmlFor="expiration-date">Expiration date</label>
                       </div>
-                      <input  onChange={handleChange} type="text"  id='expiration-date' name='expirationDate' placeholder='03/24'
+                      <input  onChange={handleChange} type="number"  id='expiration-date' name='expirationDate' placeholder='03/24' minLength={1} maxLength={4} size='5'
                        value={state?.expirationDate ? state.expirationDate : ''}
                        />
                   </div>
                   <div className="form-div">
                       <label htmlFor="security-code">Security code</label>
-                      <input type="text"  id='security-code' onChange={handleChange} name='securityCode' placeholder='420'
+                      <input type="number"  id='security-code' onChange={handleChange} name='securityCode' size={1} minLength={0} maxLength={3} placeholder='420'
                        value={state?.securityCode ? state.securityCode : ''}
                        />
                   </div>
@@ -64,8 +63,8 @@ const Main = ({handleChange,state,handleSubmit}) => {
                       <div className="label-container">
                           <label htmlFor="postal-code">Postal Code</label>
                       </div>
-                      <input type="text"  id='postal-code' onChange={handleChange} name='postalCode' placeholder='10119' 
-                      
+                      <input type="number"  id='postal-code' onChange={handleChange} name='postalCode' placeholder='10119' 
+                      size='5' minLength={1} maxLength={5}
                       value={state?.postalCode ? state.postalCodetext : ''}
                       />
                   </div>
@@ -74,7 +73,7 @@ const Main = ({handleChange,state,handleSubmit}) => {
                       <label htmlFor="next-purchase">Use this card for next time purchase</label>
                   </div>
                   <div className="submit-form">
-                       <input type="submit" onSubmit={handleSubmit} value="Add card" />
+                       <input type="submit" onClick={handleSubmit} value="Add card" />
                   </div>
               </form>
           </div>

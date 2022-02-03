@@ -22,17 +22,11 @@ function App() {
         [e.target.name]: value
       })
     } else if (e.target.name === 'expirationDate') {
-      if(value.length === 2 ) {
-        value += '/';
-      }
       setState({
         ...state,
         [e.target.name]: value
       })
     } else if (e.target.name === 'creditCardNumber') {
-      if (value.length % 4 === 0) {
-        value += ' ';
-      }
       setState({
         ...state,
         [e.target.name]: value
@@ -43,16 +37,16 @@ function App() {
         [e.target.name]: value
       })
     }
+    return state;
   }
   const handleSubmit = (e) => {
-    e.preventDefaut();
-    console.log(e, "handleSubmit!!!")
+    e.preventDefault();
+    
     setCardDetails({
       ...cardDetails, state
     })
   };
-  console.log(state)
-  console.log(cardDetails)
+  
   return (
     <div className="App">
       <Index handleSubmit={handleSubmit} handleChange={handleChange} state={state}/>
