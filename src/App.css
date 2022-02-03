@@ -83,7 +83,7 @@ header nav .user-profile-container img:hover {
   border: 1px solid #efeaea;
   width: 100%;
 }
-.main section {
+.main .payment-option {
   display: flex;
   flex-direction: column;
 }
@@ -270,7 +270,7 @@ header nav .user-profile-container img:hover {
 }
 @media only screen and (min-width: 920px) {
   .App {
-    padding: 0 3rem;
+    padding: 0 5rem;
   }
   header nav ul li{
     padding-right: 3rem;
@@ -281,8 +281,9 @@ header nav .user-profile-container img:hover {
   .main section .card-information-container {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 50%;
     padding-top: 1.5rem;
+    padding-left: 4rem;
   }
   .main section .card-information-container form {
     display: flex;
@@ -295,12 +296,102 @@ header nav .user-profile-container img:hover {
     display: flex;
     flex-direction: column;
     padding: 0.5rem 0;
-    width: 40%;
+    width: 50%;
+    padding-right: 2rem;
+  }
+  .main section .card-information-container form .right {
     padding-left: 2rem;
-  }.main .payment-option .payment-information-container .card-container {
+    padding-right: 0;
+    align-items: flex-end;
+  }
+  .main section .card-information-container form .right .label-container {
+    display: flex;
+    width: 85%;
+  }
+  .main .payment-option .payment-information-container .card-container {
     width: 100%;
   }
   .main .payment-option .card-information-container .payment-choices-container {
+    width: 100%;
+  }
+  .main .payment-option .payment-information-container {
     width: 50%;
+    padding-right: 4rem;
+  }
+  .main section .card-information-container form .form-div input {
+    width: 85%;   
+  }
+  .main section .payment-information-container .card-container img {
+    width: 60%;
+  }
+  .main .complete-payment .button {
+    width: 25%;
+  }
+}
+@media only screen and (min-width: 1250px) {
+  .App {
+    padding: 0 8rem;
+  }
+  header nav ul li{
+    padding-right: 5rem;
+  }
+  header nav .user-profile-container  {
+    margin-left: 5rem;
+  }
+  .main section .card-information-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-top: 2rem;
+    padding-left: 6rem;
+  }
+  .main section .card-information-container form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .main section .card-information-container form .form-div {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+    width: 50%;
+    padding-right: 2rem;
+  }
+  .main section .card-information-container form .right {
+    padding-left: 2rem;
+    padding-right: 0;
+    align-items: flex-end;
+  }
+  .main section .card-information-container form .right .label-container {
+    display: flex;
+    width: 90%;
+  }
+  .main .payment-option .payment-information-container .card-container {
+    width: 100%;
+  }
+  .main .payment-option .card-information-container .payment-choices-container {
+    width: 100%;
+  }
+  .main .payment-option .payment-information-container {
+    width: 50%;
+    padding-right: 4rem;
+  }
+  .main section .card-information-container form .form-div input {
+    width: 90%;   
+  }
+  .main section .payment-information-container .card-container img {
+    width: 70%;
+  }
+  .main .complete-payment .button {
+    width: 35%;
+  }
+  header nav .user-profile-container  {
+    height: 70px;
+    width: 70px;
+  }
+  header nav .user-profile-container img {
+    height: 70px;
   }
 }
