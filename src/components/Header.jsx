@@ -1,8 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import image from './Group1.png';
 
 const Header = () => {
-  return <header>
+  return (
+    <header>
       <nav>
         <ul>
             <li className="nav-item">
@@ -16,11 +18,11 @@ const Header = () => {
             </li>
         </ul>
         <div className="user-profile-container">
-            <img src="" alt="user" />
+            <img src={image} alt="user" />
         </div>
       </nav>
   </header>
-  ;
+  );
 };
 
 export default Header;
