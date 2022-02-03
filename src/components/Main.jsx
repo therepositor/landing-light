@@ -1,6 +1,9 @@
 import React from 'react';
 import HorizontalLine from './HorizontalLine';
-import card from './card2.png'
+import card from './card2.png';
+import visa from './visa.png';
+import paypal from './paypal.png';
+import discover from './discover.png';
 
 
 const Main = () => {
@@ -10,7 +13,7 @@ const Main = () => {
             <div className='payment-information-container'>
                 <div className="text">
                     <p className='payment-text'>Payment Information</p>
-                    <p className='choose-text'>Choose your method of payment</p>
+                    <p className='choose-text'>Choose your method of payment.</p>
                 </div>
                 <div className="card-container">
                     <img src={card} alt="card" />
@@ -18,17 +21,20 @@ const Main = () => {
             </div>
             <div className='card-information-container'>
                 <div className='payment-choices-container'>
-                    <div className="choices"></div>
-                    <div className="choices"></div>
+                    <div className="choices">
+                        <img src={visa} alt="visa" />
+                    </div>
+                    <div className="choices">
+                        <img src={discover} alt="discover" />
+                    </div>
                     <div className="choices">
                         <form action="">
                             <input type="radio" name="paypal" id="paypal" />
                             <label htmlFor="paypal">
-
+                                <img src={paypal} alt="paypal" />
                             </label>
                         </form>
                     </div>
-                    <div className="choices"></div>
                 </div>
                 <form action="">
                     <div className="form-div">
@@ -47,7 +53,7 @@ const Main = () => {
                         <label htmlFor="postal-code">Postal Code</label>
                         <input type="number"  id='postal-code' name='postal-code' placeholder='10119'/>
                     </div>
-                    <div className="form-div">
+                    <div className="form-radio-div">
                         <input type="radio" name="next-purchase" id="next-purchase" />
                         <label htmlFor="next-purchase">Use this card for next time purchase</label>
                     </div>
@@ -66,17 +72,18 @@ const Main = () => {
                 <span>Estimated TAX</span><span>N119.64</span>
             </div>
             <div className="amount">
-                 <span><span>Promotional Code: </span>Z4KXLM9A<span></span></span><span>N-60.00</span>
+                 <span><span>Promotional Code: </span><span className='code'>Z4KXLM9A</span></span><span>N-60.00</span>
             </div>
         </section>
         <HorizontalLine />
         <section className='complete-payment'>
-            <div className='button'>
-                <button>Complete payment</button>
-            </div>
             <div className='total'>
                 <p>Total: N2556.64</p>
             </div>
+            <div className='button'>
+                <button>Complete payment</button>
+            </div>
+            
         </section>
   </div>;
 };

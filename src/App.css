@@ -1,6 +1,306 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Zen+Kurenaido&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Jost', 'Zen Kurenaido', sans-serif;
+  min-width: 320px;
+  min-height: 100vh;
+  color: rgba(0, 0, 0, 0.842);
 }
-
-
-
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.App {
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+header nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 2rem 0;
+}
+header nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  padding-right: 1rem;
+  padding-inline-start: 0;
+  margin-block-start: 0;
+}
+header nav ul li{
+  padding-right: 1rem;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+header nav ul li a:hover {
+  opacity: 0.5;
+}
+header nav .user-profile-container  {
+  display: flex;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+header nav .user-profile-container img {
+  height: 50px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+header nav .user-profile-container img:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.main .horzontal-line {
+  display: flex;
+}
+.main .horzontal-line hr {
+  border: 1px solid #efeaea;
+  width: 100%;
+}
+.main section {
+  display: flex;
+  flex-direction: column;
+}
+.main section .payment-information-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.5rem;
+}
+.main section .payment-information-container .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.main section .payment-information-container .text .payment-text {
+  color: #000000;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+}
+.main section .payment-information-container .text .choose-text {
+  color: #cfcdcd;
+  padding-bottom: 1rem;
+  font-size: 0.8rem;
+}
+.main section .payment-information-container .card-container {
+  display: flex;
+  width: 100%;
+}
+.main section .payment-information-container .card-container img {
+  object-fit: cover;
+  border-radius: 5px;
+  width: 100%;
+}
+.main section .card-information-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.5rem;
+}
+.main section .card-information-container .payment-choices-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+.main section .card-information-container .payment-choices-container .choices {
+  display: flex;
+  padding-left: 1.5rem;
+  align-items: center;
+}
+.main section .card-information-container .payment-choices-container .choices img {
+  object-fit: contain;
+}
+.main section .card-information-container .payment-choices-container .choices form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.main section .card-information-container .payment-choices-container .choices form label {
+  padding-left: 0.5rem;
+}
+.main section .card-information-container .payment-choices-container .choices form input[type='radio'] {
+  margin-left: 2rem;
+}
+.main section .card-information-container form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.main section .card-information-container form .form-div {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0;
+  width: 100%;
+}
+.main section .card-information-container form .form-div label,
+.main section .card-information-container form .form-radio-div label {
+  font-size: 0.8rem;
+  padding-bottom: 0.4rem;
+}
+.main section .card-information-container form .form-div input {
+  padding: 1rem;
+  width: 100%;
+  background-color: #ebe4e4;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  color: inherit;
+}
+.main section .card-information-container form .form-radio-div {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem 0;
+  width: 100%;
+  align-items: center;
+}
+.main section .card-information-container form .form-radio-div input {
+  margin-right: 1rem;
+}
+.main section .card-information-container form .submit-form {
+  display: flex;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+.main section .card-information-container form .submit-form input[type='submit'] {
+  width: 100%;
+  color: #ffffff;
+  background-color: rgba(0, 0, 255, 0.651);
+  padding: 1rem;
+  border: none;
+  font-family: inherit;
+  border-radius: 5px;
+}
+.main .billing {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0;
+}
+.main .billing .amount {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.main .billing .amount span {
+  font-weight: 600;
+}
+.main .billing .amount span .code {
+  color: #a5a4a4;
+  font-weight: 400;
+}
+.main .complete-payment {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0;
+}
+.main .complete-payment p {
+  text-align: right;
+  font-weight: 600;
+}
+.main .complete-payment .button {
+  display: flex;
+  width: 100%;
+  padding: 1rem 0;
+}
+.main .complete-payment .button button {
+  width: 100%;
+  color: #ffffff;
+  background-color: rgba(0, 0, 255, 0.651);
+  padding: 1rem;
+  border: none;
+  font-family: inherit;
+  border-radius: 5px;
+}
+@media only screen and (min-width: 768px) {
+  .App {
+    padding: 0 2rem;
+  }
+  .main .payment-option {
+    display: flex;
+    flex-direction: row;
+  }
+  .main .payment-option .payment-information-container .card-container {
+    width: 80%;
+  }
+  .main .complete-payment {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .main .complete-payment .button {
+    display: flex;
+    width: 50%;
+    padding: 1rem 0;
+  }
+  header nav ul li{
+    padding-right: 2rem;
+  }
+  header nav .user-profile-container  {
+    margin-left: 3rem;
+  }
+}
+@media only screen and (min-width: 920px) {
+  .App {
+    padding: 0 3rem;
+  }
+  header nav ul li{
+    padding-right: 3rem;
+  }
+  header nav .user-profile-container  {
+    margin-left: 4rem;
+  }
+  .main section .card-information-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 1.5rem;
+  }
+  .main section .card-information-container form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .main section .card-information-container form .form-div {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0;
+    width: 40%;
+    padding-left: 2rem;
+  }.main .payment-option .payment-information-container .card-container {
+    width: 100%;
+  }
+  .main .payment-option .card-information-container .payment-choices-container {
+    width: 50%;
+  }
+}
