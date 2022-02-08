@@ -41,7 +41,7 @@ const Main = ({handleChange,state,handleSubmit}) => {
               <form>
                   <div className="form-div">
                       <label htmlFor="credit-card-number">Credit card number</label>
-                      <input  type="number"  id='credit-card-number' onChange={handleChange} name='creditCardNumber' placeholder='4324 5433 9382 1030' minLength={1} maxLength={16} size='19'
+                      <input  type="number"  id='credit-card-number' onChange={handleChange} name='creditCardNumber' placeholder='4324 5433 9382 1030' maxLength={16} 
                       value={state?.creditCardNumber ? state.creditCardNumber : ''}
                       />
                   </div>
@@ -49,13 +49,13 @@ const Main = ({handleChange,state,handleSubmit}) => {
                       <div className="label-container">
                           <label htmlFor="expiration-date">Expiration date</label>
                       </div>
-                      <input  onChange={handleChange} type="number"  id='expiration-date' name='expirationDate' placeholder='03/24' minLength={1} maxLength={4} size='5'
+                      <input  onChange={handleChange} type="number"  id='expiration-date' name='expirationDate' placeholder='03/24' maxLength={5}
                        value={state?.expirationDate ? state.expirationDate : ''}
                        />
                   </div>
                   <div className="form-div">
                       <label htmlFor="security-code">Security code</label>
-                      <input type="number"  id='security-code' onChange={handleChange} name='securityCode' size={1} minLength={0} maxLength={3} placeholder='420'
+                      <input type="number"  id='security-code' onChange={handleChange} name='securityCode' maxLength={3} placeholder='420'
                        value={state?.securityCode ? state.securityCode : ''}
                        />
                   </div>
@@ -64,8 +64,8 @@ const Main = ({handleChange,state,handleSubmit}) => {
                           <label htmlFor="postal-code">Postal Code</label>
                       </div>
                       <input type="number"  id='postal-code' onChange={handleChange} name='postalCode' placeholder='10119' 
-                      size='5' minLength={1} maxLength={5}
-                      value={state?.postalCode ? state.postalCodetext : ''}
+                      maxLength={5}
+                      value={state?.postalCode ? state.postalCode : ''}
                       />
                   </div>
                   <div className="form-radio-div">
