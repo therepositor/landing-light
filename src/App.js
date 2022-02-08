@@ -38,6 +38,7 @@ function App() {
         newStr = splitStr.splice(index,0,' ');
         index = 14;
         newStr = splitStr.splice(index,0,' ');
+        console.log(newStr);
         return splitStr;
       }
       setState({
